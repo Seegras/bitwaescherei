@@ -6,9 +6,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
 }
 
+/*
 .l-header div { border: 1px solid green; }
 .l-main div { border: 1px solid red; }
+*/
 
+/*
 .l-section { --skew: 3deg; }
 .l-section header {
     padding-top: 5vh;
@@ -32,15 +35,29 @@ h1, h2, h3, h4, h5, h6 {
     height: 3em;
     background: inherit;
     position: absolute;
-    top: 0; /*-2.5em; */
+    top: 0; /*-2.5em;
     left: 0;
     -webkit-transform: skew(0,var(--skew));
     transform: skew(0,var(--skew));
     background-color: black;
-    /* var(--color-bg); */
+    /* var(--color-bg);
+}
+*/
+
+.page-header::after {
+    height: 2em;
+    width: 100%;
+    content: "";
+    display: block;
 }
 
-stray::after
+#bitwMap {
+      height: 400px;
+      width: 100%;
+}
+.wip {
+    color: var(--light);
+}
 
 .bgcol {
     background-color: rgb(241, 243, 241);

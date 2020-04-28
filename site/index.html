@@ -3,10 +3,146 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="/static/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="static/css/bitw.css" />
+    
+    <!-- OpenLayers https://openlayers.org/download/ -->
+    <script src="/static/js/ol.js"></script>
+    <link rel="stylesheet" href="/static/css/ol.css">
+
 </head>
-<BODY>
-<H1>Bitwäscherei</H1>
+<BODY class="bgcol">
+
+<div id="webapp">
+    <header class="l-header page">
+        <div class="page-header">
+            <a class="" href="/" title="Bitwäscherei">
+                <h1>Bitwäscherei</h1>
+            </a>
+            <p>Hackerspace-Kollektiv in Zürich</p>
+        </div>
+    </header>
+    <main class="l-main page">
+        <div>
+            <section class="l-section c-splash">
+                <header class="l-s-header">
+                    <span class="l-section__bg"></span>
+                        <div class="container-fluid">
+<div class="row">
+    <div class="col-sm"><h2>Das Projekt</h2>
+    <p>
+    Vier Vereine unter einem Dach
+    <ul>
+        <li>Chaos Computer Club Zürich (CCCZH)</li>
+        <li>Linux User Group Switzerland (LUGS, in Zürich)</li>
+        <li>MechArtLab (SGMK)</li>
+        <li>Digitale Gesellschaft</li>
+    </ul>
+    Ein Raum für <a href="#about-erfahr">Erfahrungsaustauch</a>, <a href="#about-medien">Medienarbeit</a> und <a href="#about-hackspace">Hackerspaces</a>
+    </p>
+    </div>
+    <div class="col-sm">
+        <img src="/static/img/Raum_009_ZWZ.jpg"
+            alt="Leerer Raum in der ehemaligen Zentralwäscherei Zürich"
+            style="width: 100%" >
+    </div>
+</div>
+
+
+<hr />
+<div class="row">
+  <div class="col-sm-8">
+      <div id="bitwMap"></div>
+  </div>
+  <div class="col-sm-4">Ehemalige Zentralwäscherei Zürich<br/><br/>Verein Bitwäscherei<br/>Neue Hard 12<br/>CH-8005 Zürich</div>
+</div>
+
+
+<div class="row wip">
+  <div class="col-sm">col-sm</div>
+  <div class="col-sm">col-sm</div>
+  <div class="col-sm">col-sm</div>
+</div>
+
+<hr />
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row">
+  <div class="col-12 col-md-8">
+      <h2>Das läuft gerade</h2>
+  <p>
+      Sieben Arbeitsgruppen sind an der Arbeit:
+      <ul>
+          <li>AG Raumplanung</li>
+          <li>AG Infrastruktur</li>
+          <li>AG Kommunikation</li>
+          <li>AG Schliesssystem</li>
+          <li>AG Programm</li>
+          <li>Vorstand</li>
+          <li>Delegiertenversammlung</li>
+      </ul>
+  </p>
+  <p>Ab Anfang Mai sind hier genaure Informationen verfügbar.</p>
+  </div>
+  <div class="col-6 col-md-4">
+  <h2>Bleib informiert</h2>
+  <p>Verweise auf Kommunikationskanäle werden hier bald ergänzt.</p>
+  </div>
+</div>
+
+<hr />
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-6 col-md-4">
+      <a id="about-erfahr"></a>
+      <h3>Erfahrung</h3>
+      <p></p>
+  </div>
+  <div class="col-6 col-md-4">
+      <a id="about-medien"></a>
+      <h3>Medienarbeit</h3>
+      <p></p>
+  </div>
+  <div class="col-6 col-md-4">
+      <a id="about-hackspace"></a>
+      <h3>Hackerspace</h3>
+      <p></p>
+  </div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row wip">
+  <div class="col-6">.col-6</div>
+  <div class="col-6">.col-6</div>
+</div>
+                    </div>
+                </header>
+
+                <article>
+                </article>
+            </section>
+        </div>
+    </main>
+</div>
+
+
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'bitwMap',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([8.520364, 47.387064]),
+            zoom: 16
+        })
+      });
+    </script>
+  
 </BODY>
 </HTML>
 
